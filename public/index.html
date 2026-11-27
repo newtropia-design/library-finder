@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>가까운 도서관 찾기</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <main>
+    <h1>가까운 도서관 찾기</h1>
+    <p class="badge" id="mode-badge">[예시 데이터]</p>
+
+    <section class="card">
+      <h2>1. 내 위치 입력</h2>
+      <div class="row">
+        <label>위도 <input id="lat" type="number" step="any" placeholder="예: 37.5665"></label>
+        <label>경도 <input id="lng" type="number" step="any" placeholder="예: 126.9780"></label>
+      </div>
+      <div class="row">
+        <button id="sample-btn" type="button">예시 위치 사용 (서울 시청 근처)</button>
+        <button id="search-btn" type="button">가까운 순으로 보기</button>
+      </div>
+      <p id="message" class="message" role="alert"></p>
+    </section>
+
+    <section class="card">
+      <h2>2. 도서관 목록 (가까운 순)</h2>
+      <ul id="list" class="list"></ul>
+    </section>
+
+    <section class="card" id="detail" hidden>
+      <h2>3. 선택한 도서관</h2>
+      <dl id="detail-body"></dl>
+    </section>
+  </main>
+  <script src="/js/app.js"></script>
+</body>
+</html>
